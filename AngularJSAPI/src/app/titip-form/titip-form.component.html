@@ -1,0 +1,49 @@
+<div class="main-content">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="card">
+					<div class="card-header" data-background-color="red">
+						<h4 class="title">Tambah Titipan</h4>
+					</div>
+					<div class="card-content">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group form-black label-floating">
+										<label class="control-label">Nama Pemilik</label>
+										<select class="form-control" [(ngModel)]="id_member">
+											<option *ngFor="let data of httpdata" value="{{data.id_member}}">{{data.nama}}</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group form-black label-floating">
+										<label class="control-label">Jenis Hewan</label>
+										<input type="nama" name="jenishewan" [(ngModel)]="jenisHewan" class="form-control" required>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group form-black label-floating">
+										<label class="control-label">Status</label>
+										<input type="text" name="status" [(ngModel)]="status" class="form-control" required>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group form-black label-floating">
+										<label class="control-label">Jenis Jasa</label>
+										<input type="text" name="jenisjasa" [(ngModel)]="jenisJasa" class="form-control" required>
+									</div>	
+								</div>	
+							</div>
+							<button class="btn btn-danger" (click)="doPost()" routerLink="/titip-list" type="submit">Submit</button>
+							<a href="" class="btn btn-default">Cancel</a>
+						
+					</div>
+				</div>
+			</div>

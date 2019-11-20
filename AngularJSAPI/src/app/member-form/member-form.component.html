@@ -1,0 +1,48 @@
+<div class="main-content">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="card">
+					<div class="card-header" data-background-color="red">
+						<h4 class="title">Tambah Member</h4>
+					</div>
+					<div class="card-content">
+						<form action="" method="POST" enctype="multipart/form-data">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group form-black label-floating">
+										<label class="control-label">NIK</label>
+										<input type="text" name="nik" [(ngModel)]="nik" class="form-control" required>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group form-black label-floating">
+										<label class="control-label">Nama</label>
+										<input type="nama" name="nama" [(ngModel)]="nama" class="form-control" required>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group form-black label-floating">
+										<label class="control-label">Alamat</label>
+										<input type="text" name="alamat" [(ngModel)]="alamat" class="form-control" required>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group form-black label-floating">
+										<label class="control-label">No HP</label>
+										<input type="text" name="nohp" [(ngModel)]="nohp" class="form-control" required>
+									</div>	
+								</div>	
+							</div>
+							<button class="btn btn-danger" (click)="doPost()" routerLink="/member-list" type="submit">Submit</button>
+							<a  routerLink="/member-list" class="btn btn-default">Cancel</a>
+						</form>
+					</div>
+				</div>
+			</div>

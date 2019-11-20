@@ -1,0 +1,45 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header" data-background-color="red">
+                      <h4 class="title">Data Member</h4>
+                  </div>
+                  <div class="table-responsive">
+                      <table class="table">
+                          <thead class="text-danger">
+                              <tr>
+                                  <th>ID Member</th>
+                                  <th>NIK</th>
+                                  <th>Nama</th>
+                                  <th>Alamat</th>
+                                  <th>No HP</th>
+                                  <th>Aksi</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr *ngFor="let data of httpdata">
+                                  <td>{{data.id_member}}</td>
+                                  <td>{{data.nik}}</td>
+                                  <td>{{data.nama}}</td>
+                                  <td>{{data.alamat}}</td>
+                                  <td>{{data.noHp}}</td>
+                                  <td><a  routerLink="/member-list" (click)="doDelete(data.id_member)" 
+                                    class="btn btn-danger">
+                                    <i class="material-icons">delete</i>
+                                </a>
+                                <a routerLink="/member-update/{{data.id_member}}" (click)="Update(data.id_member)" 
+                                    class="btn btn-warning">
+                                    <i class="material-icons">edit</i>
+                                </a></td>
+                              </tr>                              
+                          </tbody>
+                      </table>
+
+                  </div>
+              </div>
+          </div>          
+      </div>
+  </div>
+</div>

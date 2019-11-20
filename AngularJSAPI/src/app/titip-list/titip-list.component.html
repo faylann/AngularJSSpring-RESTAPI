@@ -1,0 +1,46 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header" data-background-color="red">
+                      <h4 class="title">Data Titip</h4>
+                      <p class="category">Here is a subtitle for this table</p>
+                  </div>
+                  <div class="card-content table-responsive">
+                      <table class="table">
+                          <thead class="text-danger">
+                              <tr>
+                                  <th>Kode Titip</th>
+                                  <th>Nama Member</th>
+                                  <th>Jenis Hewan</th>
+                                  <th>Jenis Jasa</th>
+                                  <th>Status</th>
+                                  <th>Aksi</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                                <tr *ngFor="let data of httpdata">
+                                        <td>{{data.kodeTitip}}</td>
+                                        <td>{{data.member.nama}}</td>
+                                        <td>{{data.jenisHewan}}</td>
+                                        <td>{{data.jenisJasa}}</td>
+                                        <td>{{data.status}}</td>
+                                        <td><a  routerLink="/titip-list" (click)="doDelete(data.kodeTitip)" 
+                                          class="btn btn-danger">
+                                          <i class="material-icons">delete</i>
+                                      </a>
+                                      <a routerLink="/titip-update/{{data.id_titip}}" (click)="Update(data.id_titip)" 
+                                          class="btn btn-warning">
+                                          <i class="material-icons">edit</i>
+                                      </a></td>
+                                    </tr>
+                          </tbody>
+                      </table>
+
+                  </div>
+              </div>
+          </div>        
+      </div>
+  </div>
+</div>
