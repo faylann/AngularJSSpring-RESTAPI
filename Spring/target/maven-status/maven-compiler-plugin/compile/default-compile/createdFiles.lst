@@ -1,0 +1,10 @@
+com\brainmatics\service\TitipService.class
+com\brainmatics\repo\MemberRepo.class
+com\brainmatics\controller\TitipController.class
+com\brainmatics\CORSFilter.class
+com\brainmatics\entity\Titip.class
+com\brainmatics\service\MemberService.class
+com\brainmatics\entity\Member.class
+com\brainmatics\DemoJpaApplication.class
+com\brainmatics\controller\MemberController.class
+com\brainmatics\repo\TitipRepo.class
